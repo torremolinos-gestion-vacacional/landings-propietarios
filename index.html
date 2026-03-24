@@ -3,28 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión Airbnb Torremolinos | Rentabilidad Máxima</title>
+    <title>Gestión Integral de Apartamentos Turísticos en Torremolinos | 15% Comisión</title>
+    <meta name="description" content="No pierdas más dinero con tu alquiler vacacional en Torremolinos. Gestión completa por un 15%. Sin permanencia. Maximizamos tus ingresos hoy.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; text-align: center; }
-        .hero { background: linear-gradient(rgba(0,123,255,0.8), rgba(0,123,255,0.8)), url('https://images.unsplash.com'); background-size: cover; color: white; padding: 80px 20px; }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        p { font-size: 1.2rem; max-width: 700px; margin: 20px auto; }
-        .cta-button { background-color: #25D366; color: white; padding: 18px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem; display: inline-block; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        .cta-button:hover { background-color: #128C7E; transform: translateY(-3px); }
-        .features { padding: 40px 20px; display: flex; justify-content: space-around; flex-wrap: wrap; }
-        .feature { max-width: 300px; margin: 20px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        :root {
+            --primary-teal: #57B8B8; /* Color techo logo */
+            --accent-coral: #F27A5D; /* Color pin logo */
+            --dark: #1A1A1A;
+            --light-bg: #F4F7F7;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--white);
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header { padding: 15px 0; background: var(--white); border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo-area { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { height: 55px; width: auto; }
+        .logo-text { font-weight: 800; font-size: 1rem; color: var(--primary-teal); line-height: 1.2; text-transform: uppercase; }
+        
+        .nav-links { display: flex; align-items: center; gap: 20px; }
+        .link-main-web { color: var(--dark); text-decoration: none; font-weight: 600; font-size: 0.9rem; border-bottom: 2px solid var(--primary-teal); transition: 0.3s; }
+        .link-main-web:hover { color: var(--primary-teal); }
+        .btn-wa-header { background: #25D366; color: white; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+
+        /* Hero Section */
+        .hero { padding: 90px 0; background: linear-gradient(135deg, #f8fafb 0%, #e9f2f2 100%); text-align: center; }
+        .hero h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.1; margin-bottom: 20px; color: var(--dark); }
+        .hero h1 span { color: var(--accent-coral); }
+        .hero p { font-size: 1.4rem; margin-bottom: 35px; color: #444; max-width: 800px; margin-inline: auto; font-weight: 400; }
+        .hero-badge { background: var(--primary-teal); color: white; padding: 6px 16px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Pain Points */
+        .pains { padding: 80px 0; }
+        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 50px; font-weight: 800; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .pain-card { padding: 40px; border-radius: 16px; background: var(--light-bg); border-left: 6px solid var(--accent-coral); }
+        .pain-card h3 { margin-bottom: 15px; font-size: 1.4rem; color: var(--dark); }
+        .pain-card p { color: #555; }
+
+        /* Offer - 15% */
+        .offer-15 { padding: 80px 0; background: var(--dark); color: white; text-align: center; }
+        .offer-15 h2 { font-size: 2.8rem; margin-bottom: 15px; }
+        .commission-circle { width: 180px; height: 180px; border: 8px solid var(--primary-teal); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 30px auto; }
+        .commission-circle span.pct { font-size: 4rem; font-weight: 800; color: var(--accent-coral); line-height: 1; }
+        .commission-circle span.txt { font-size: 1rem; font-weight: 700; text-transform: uppercase; }
+        .offer-15 p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
+
+        /* Real Case Comparison */
+        .cases { padding: 80px 0; background: var(--white); }
+        .case-table { max-width: 800px; margin: 0 auto; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid #eee; }
+        .case-row { display: flex; padding: 25px; border-bottom: 1px solid #eee; align-items: center; }
+        .case-label { flex: 1; font-weight: 700; font-size: 1.1rem; }
+        .case-value-old { flex: 1; text-align: center; color: #999; text-decoration: line-through; font-size: 1.2rem; }
+        .case-value-new { flex: 1; text-align: center; color: var(--primary-teal); font-weight: 800; font-size: 1.8rem; }
+        .case-header { background: #f8f9fa; font-size: 0.8rem; text-transform: uppercase; color: #777; letter-spacing: 1px; padding: 15px 25px; }
+
+        /* Services Grid */
+        .services { padding: 80px 0; background: var(--light-bg); }
+        .service-item { background: white; padding: 30px; border-radius: 12px; display: flex; gap: 20px; align-items: flex-start; }
+        .service-icon { background: var(--primary-teal); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 800; }
+
+        /* CTA Section */
+        .cta-final { padding: 100px 0; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1512100356956-c1226c693919?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; color: white; }
+        .btn-main { background: var(--accent-coral); color: white; padding: 22px 50px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.5rem; display: inline-block; transition: 0.4s; box-shadow: 0 10px 30px rgba(242, 122, 93, 0.5); }
+        .btn-main:hover { transform: scale(1.05); background: #e06a4d; }
+
+        /* Footer */
+        footer { padding: 70px 0; background: #111; color: #888; text-align: center; font-size: 0.95rem; }
+        footer a { color: var(--primary-teal); text-decoration: none; font-weight: 700; }
+        footer b { color: white; }
+        .footer-logo { height: 60px; margin-bottom: 20px; opacity: 0.8; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
+            .nav-links { display: none; }
+            .case-row { flex-direction: column; text-align: center; gap: 10px; }
+        }
+
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 1000; text-decoration: none; transition: 0.3s; }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <h1>¿Tu apartamento en Torremolinos rinde lo que debería?</h1>
-        <p>Expertos en gestión vacacional en La Carihuela, Bajondillo y Playamar. Maximiza tus ingresos y olvídate de la limpieza, el check-in y las licencias.</p>
-        <a href="https://wa.me" class="cta-button">Consultar Rentabilidad Gratis por WhatsApp</a>
-    </div>
-    <div class="features">
-        <div class="feature"><h3>Gestión Integral</h3><p>Nos encargamos de todo: desde el anuncio hasta la limpieza profesional.</p></div>
-        <div class="feature"><h3>Licencia VFT</h3><p>Tramitamos tu licencia turística de forma gratuita e inmediata.</p></div>
-        <div class="feature"><h3>Cero Preocupaciones</h3><p>Control de ruidos, fianza y atención al huésped 24/7.</p></div>
-    </div>
+
+    <header>
+        <div class="container nav">
+            <a href="https://www.gestion-apartamentos-turisticos-torremolinos.com/" class="logo-area">
+                <img src="https://i.ibb.co/3mN9R0B/Logo-Empresa.jpg" alt="Logo Torremolinos Gestión Vacacional" class="logo-img">
+                <span class="logo-text">Torremolinos<br>Gestión Vacacional</span>
+            </a>
+            <div class="nav-links">
+                <a href="https://www.gestion-apartamentos-turisticos-torremolinos.com/" class="link-main-web">Ver Web Principal</a>
+                <a href="https://wa.me/34603658260" class="btn-wa-header">Contacto Directo</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <span class="hero-badge">Expertos en Captación de Propietarios</span>
+            <h1>Si tu piso en Torremolinos genera 900€... <span>te están robando 1.500€ al mes</span></h1>
+            <p>La diferencia entre un "gestor" convencional y nuestra estrategia de <b>Revenue Management</b> son más de 12.000€ extra de beneficio anual para ti.</p>
+            <a href="https://wa.me/34603658260" class="btn-main">¿Cuánto dinero estoy perdiendo?</a>
+        </div>
+    </section>
+
+    <section class="pains">
+        <div class="container">
+            <h2 class="section-title">¿Por qué tu rentabilidad está estancada?</h2>
+            <div class="grid">
+                <div class="pain-card">
+                    <h3>Calendario vacío</h3>
+                    <p>Cada noche que tu apartamento en Torremolinos no tiene reserva, es dinero que se evapora. Nosotros garantizamos una ocupación superior al 85% anual.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Precios "al azar"</h3>
+                    <p>Poner el mismo precio todo el verano es un error fatal. Usamos software **Icnea** para ajustar precios hora a hora según la demanda real de la Costa del Sol.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Limpieza y Logística</h3>
+                    <p>Las malas reseñas por falta de limpieza hunden tu posicionamiento. Tenemos equipo propio y lavandería profesional en Torremolinos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="offer-15">
+        <div class="container">
+            <h2>Gestión Integral Transparente</h2>
+            <div class="commission-circle">
+                <span class="pct">15%</span>
+                <span class="txt">Comisión</span>
+            </div>
+            <p>Nos encargamos de absolutamente todo: Marketing, check-in 24/7, limpieza, mantenimiento y asesoría legal. Tú solo recibes los ingresos cada mes.</p>
+            <p><b>Sin permanencia obligatoria.</b> Si no cumplimos lo prometido, eres libre de irte. Así de claro.</p>
+        </div>
+    </section>
+
+    <section class="cases">
+        <div class="container">
+            <h2 class="section-title">Resultados Reales en la zona</h2>
+            <div class="case-table">
+                <div class="case-header">Comparativa Mensual Media (Apartamento 2 Hab.)</div>
+                <div class="case-row">
+                    <span class="case-label">Ingreso Bruto Mensual</span>
+                    <span class="case-value-old">1.150€</span>
+                    <span class="case-value-new">2.640€</span>
+                </div>
+                <div class="case-row">
+                    <span class="case-label">Ocupación Media</span>
+                    <span class="case-value-old">52%</span>
+                    <span class="case-value-new">91%</span>
+                </div>
+                <div class="case-row" style="border-bottom: none;">
+                    <span class="case-label">Tu Tiempo Dedicado</span>
+                    <span class="case-value-old">25 Horas</span>
+                    <span class="case-value-new" style="font-size: 1.2rem; color: var(--accent-coral);">0 Horas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Nuestra gestión incluye:</h2>
+            <div class="grid">
+                <div class="service-item">
+                    <div class="service-icon">1</div>
+                    <div>
+                        <b>Optimización SEO:</b> Posicionamos tu anuncio en los primeros puestos de Airbnb, Booking y Expedia.
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">2</div>
+                    <div>
+                        <b>Alta Legal (VFT):</b> Tramitamos tu licencia turística en la Junta de Andalucía de forma gratuita.
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">3</div>
+                    <div>
+                        <b>Check-in 24/7:</b> Entrega de llaves y atención al huésped a cualquier hora, los 365 días del año.
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">4</div>
+                    <div>
+                        <b>Registro Policial:</b> Comunicación obligatoria automática de datos de huéspedes (Hospedajes).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <div class="container">
+            <h2 style="font-size: 2.8rem; margin-bottom: 20px;">Tu apartamento puede rendir el doble</h2>
+            <p style="font-size: 1.4rem; margin-bottom: 40px; opacity: 0.9;">No dejes pasar la temporada alta con una gestión mediocre.</p>
+            <a href="https://wa.me/34603658260" class="btn-main">Solicitar auditoría de ingresos GRATIS</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <img src="https://i.ibb.co/3mN9R0B/Logo-Empresa.jpg" alt="Logo" class="footer-logo">
+            <p style="margin-bottom: 10px;"><b>Torremolinos Gestión Vacacional</b></p>
+            <p>Calle Campillos, 10, 29620 Torremolinos, Málaga</p>
+            <p>Email: <a href="mailto:info@gestion-apartamentos-turisticos-torremolinos.com">info@gestion-apartamentos-turisticos-torremolinos.com</a></p>
+            <p>Tel/WhatsApp: <b>+34 603 658 260</b></p>
+            <div style="margin-top: 30px; border-top: 1px solid #333; padding-top: 30px;">
+                <p>Visita nuestra web oficial: <a href="https://www.gestion-apartamentos-turisticos-torremolinos.com/">www.gestion-apartamentos-turisticos-torremolinos.com</a></p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">&copy; 2025 Torremolinos Gestión Vacacional. Expertos en marketing inmobiliario y gestión de alojamientos turísticos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/34603658260" class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 32 32" style="width:35px; height:35px; fill:white;"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.48 2.031 7.786l-2.031 7.214 7.391-1.938c2.207 1.234 4.755 1.938 7.409 1.938 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.454 0-4.735-0.655-6.703-1.795l-0.48-0.276-4.417 1.156 1.177-4.183-0.302-0.48c-1.248-1.983-1.974-4.324-1.974-6.83 0-7.12 5.792-12.912 12.912-12.912s12.912 5.792 12.912 12.912-5.792 12.912-12.912 12.912zM21.786 19.103c-0.318-0.159-1.88-0.927-2.172-1.033s-0.504-0.159-0.717 0.159c-0.212 0.318-0.822 1.033-1.007 1.246s-0.371 0.239-0.689 0.080c-0.318-0.159-1.341-0.495-2.556-1.579-0.945-0.843-1.583-1.884-1.769-2.202s-0.021-0.491 0.138-0.649c0.143-0.142 0.318-0.371 0.477-0.557s0.212-0.318 0.318-0.531c0.106-0.212 0.053-0.398-0.026-0.557s-0.717-1.726-0.981-2.364c-0.258-0.62-0.519-0.536-0.717-0.546s-0.424-0.011-0.637-0.011c-0.212 0-0.557 0.080-0.848 0.398s-1.114 1.087-1.114 2.651c0 1.564 1.14 3.076 1.299 3.289s2.246 3.429 5.44 4.807c0.76 0.328 1.352 0.524 1.815 0.672 0.763 0.243 1.458 0.209 2.008 0.127 0.613-0.091 1.88-0.769 2.145-1.511s0.265-1.379 0.186-1.511c-0.079-0.132-0.292-0.212-0.61-0.371z"></path></svg>
+    </a>
+
 </body>
 </html>
