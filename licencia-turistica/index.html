@@ -1,1 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licencia Turística Torremolinos: Requisitos y Gestión GRATIS</title>
+    <meta name="description" content="¿Necesitas la licencia VFT para tu piso en Torremolinos? Te ayudamos con los requisitos y tramitamos tu alta GRATIS al confiar en nuestra gestión del 15%.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-teal: #57B8B8;
+            --accent-coral: #F27A5D;
+            --dark: #1A1A1A;
+            --light-bg: #F0F7F7;
+            --white: #ffffff;
+            --danger: #d63031;
+        }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--white);
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header { padding: 12px 0; background: var(--white); border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo-box { display: flex; align-items: center; gap: 15px; text-decoration: none; }
+        .logo-img { height: 60px; width: auto; }
+        .logo-text { font-weight: 800; font-size: 0.95rem; color: var(--primary-teal); line-height: 1.2; text-transform: uppercase; }
+        
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .web-link { color: var(--dark); text-decoration: none; font-weight: 700; font-size: 0.9rem; border-bottom: 2px solid var(--accent-coral); }
+        .btn-wa-nav { background: #25D366; color: white; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: 0.3s; }
+
+        /* Hero Legal */
+        .hero-legal { padding: 90px 0; background: linear-gradient(135deg, #f0f7f7 0%, #ffffff 100%); text-align: center; }
+        .hero-legal h1 { font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 25px; color: var(--dark); }
+        .hero-legal h1 span { color: var(--accent-coral); }
+        .hero-legal p { font-size: 1.3rem; margin-bottom: 35px; color: #4A5568; max-width: 850px; margin-inline: auto; }
+        .danger-badge { background: var(--danger); color: white; padding: 8px 20px; border-radius: 5px; font-weight: 700; display: inline-block; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; }
+
+        /* Requirements Section */
+        .req-section { padding: 80px 0; }
+        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 50px; font-weight: 800; }
+        .req-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .req-card { padding: 40px; border-radius: 20px; background: var(--light-bg); border-top: 5px solid var(--primary-teal); }
+        .req-card h3 { margin-bottom: 15px; font-size: 1.4rem; color: var(--dark); }
+        .req-card ul { list-style: none; padding-top: 10px; }
+        .req-card li { margin-bottom: 10px; padding-left: 25px; position: relative; }
+        .req-card li::before { content: '→'; position: absolute; left: 0; color: var(--accent-coral); font-weight: 800; }
+
+        /* Free High Offer */
+        .free-offer { padding: 80px 0; background: var(--dark); color: white; text-align: center; border-radius: 40px; margin: 40px 20px; }
+        .free-offer h2 { font-size: 2.8rem; margin-bottom: 20px; }
+        .free-offer .big-free { font-size: 7rem; font-weight: 800; color: var(--primary-teal); line-height: 1; }
+        .free-offer p { font-size: 1.3rem; max-width: 800px; margin: 30px auto; opacity: 0.9; }
+
+        /* Management details */
+        .management-details { padding: 80px 0; text-align: center; }
+        .commission { font-size: 5rem; font-weight: 800; color: var(--accent-coral); line-height: 1; }
+        .commission-sub { font-size: 1.4rem; font-weight: 700; color: var(--primary-teal); text-transform: uppercase; display: block; margin-bottom: 30px; }
+
+        /* FAQ Legal */
+        .faq-legal { padding: 80px 0; background: var(--light-bg); }
+        .faq-item { max-width: 850px; margin: 0 auto 20px; background: white; padding: 25px; border-radius: 12px; border-left: 5px solid var(--primary-teal); }
+        .faq-item h4 { color: var(--dark); font-size: 1.2rem; margin-bottom: 10px; }
+
+        /* Final CTA */
+        .cta-box { padding: 100px 0; text-align: center; background: var(--primary-teal); color: white; }
+        .btn-main { background: var(--accent-coral); color: white; padding: 22px 50px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.5rem; display: inline-block; transition: 0.3s; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .btn-main:hover { transform: scale(1.05); background: #e06a4d; }
+
+        /* Footer */
+        footer { padding: 60px 0; background: #111; color: #777; text-align: center; font-size: 0.95rem; }
+        footer a { color: var(--primary-teal); text-decoration: none; font-weight: 700; }
+        footer b { color: white; }
+        .footer-logo { height: 75px; margin-bottom: 20px; }
+
+        /* Floating WA */
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .hero-legal h1 { font-size: 2.1rem; }
+            .free-offer .big-free { font-size: 4.5rem; }
+            .logo-text { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav">
+            <a href="https://www.gestion-apartamentos-turisticos-torremolinos.com/" class="logo-box">
+                <img src="https://www.gestion-apartamentos-turisticos-torremolinos.com/wp-content/uploads/go-x/u/2c92d1c9-99dd-475f-9dec-624ddd50bc0d/image-240x240.png" alt="Logo" class="logo-img">
+                <span class="logo-text">Torremolinos<br>Gestión Vacacional</span>
+            </a>
+            <div class="nav-right">
+                <a href="https://www.gestion-apartamentos-turisticos-torremolinos.com/" class="web-link" target="_blank">Web Principal</a>
+                <a href="https://wa.me/34603658260" target="_blank" class="btn-wa-nav">WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-legal">
+        <div class="container">
+            <span class="danger-badge">Las multas pueden llegar a los 150.000€</span>
+            <h1>¿Quieres alquilar tu piso en Torremolinos pero <span>te aterra el papeleo legal?</span></h1>
+            <p>No te arriesgues a sanciones graves por desconocimiento. Nosotros gestionamos todos los requisitos de la Junta de Andalucía por ti y te damos de alta GRATIS.</p>
+            <a href="https://wa.me/34603658260" target="_blank" class="btn-main">Consultar mis requisitos gratis</a>
+        </div>
+    </section>
+
+    <section class="req-section">
+        <div class="container">
+            <h2 class="section-title">Requisitos básicos para alquilar en Torremolinos</h2>
+            <div class="req-grid">
+                <div class="req-card">
+                    <h3>Documentación Técnica</h3>
+                    <ul>
+                        <li>Licencia de Primera Ocupación (LPO).</li>
+                        <li>Escrituras o Nota Simple actualizada.</li>
+                        <li>IBI y Certificado Energético.</li>
+                    </ul>
+                </div>
+                <div class="req-card">
+                    <h3>Equipamiento Obligatorio</h3>
+                    <ul>
+                        <li>Refrigeración y calefacción por elementos fijos.</li>
+                        <li>Botiquín y extintores reglamentarios.</li>
+                        <li>Hojas de reclamaciones oficiales.</li>
+                    </ul>
+                </div>
+                <div class="req-card">
+                    <h3>Obligaciones de Registro</h3>
+                    <ul>
+                        <li>Alta en el Registro de Turismo de Andalucía.</li>
+                        <li>Registro de viajeros ante la Policía (Hospedajes).</li>
+                        <li>Declaración responsable de inicio de actividad.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="free-offer">
+        <div class="container">
+            <h2>Nosotros hacemos el alta VFT</h2>
+            <div class="big-free">GRATIS</div>
+            <p>Olvídate de citas previas, formularios infinitos y dudas legales. Si confías en nosotros para la gestión integral de tu propiedad, <b>tramitamos tu licencia turística sin coste alguno.</b></p>
+        </div>
+    </section>
+
+    <section class="management-details">
+        <div class="container">
+            <span class="commission">15%</span>
+            <span class="commission-sub">Todo incluido. Sin sorpresas.</span>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem; color: #555;">Una vez obtenida la licencia, empezamos a facturar. Nos encargamos de que tu vivienda cumpla siempre la normativa de Torremolinos y la Costa del Sol. <b>Sin permanencia obligatoria.</b></p>
+        </div>
+    </section>
+
+    <section class="faq-legal">
+        <div class="container">
+            <h2 class="section-title">Dudas frecuentes sobre licencias</h2>
+            <div class="faq-item">
+                <h4>¿Cuánto tarda el alta en la Junta de Andalucía?</h4>
+                <p>Si la vivienda cumple con los requisitos técnicos (LPO), la declaración responsable se presenta de forma telemática y puedes empezar a alquilar **al instante**.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Qué pasa con el registro de la Policía?</h4>
+                <p>Es obligatorio por Ley. Nuestra gestión del 15% incluye la comunicación automática de los datos de cada huésped a través de la plataforma Hospedajes.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Es obligatorio el aire acondicionado?</h4>
+                <p>Sí, la normativa andaluza exige que las viviendas turísticas dispongan de refrigeración y calefacción fijas (no portátiles) en dormitorios y salones.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-box">
+        <div class="container">
+            <h2 style="font-size: 2.8rem; margin-bottom: 25px;">Empieza a alquilar de forma 100% legal</h2>
+            <p style="font-size: 1.4rem; margin-bottom: 40px; opacity: 0.9;">No esperes a recibir un requerimiento de inspección. Déjalo en manos de expertos.</p>
+            <a href="https://wa.me/34603658260" target="_blank" class="btn-main">Tramitar mi licencia turística ya</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <img src="https://www.gestion-apartamentos-turisticos-torremolinos.com/wp-content/uploads/go-x/u/2c92d1c9-99dd-475f-9dec-624ddd50bc0d/image-240x240.png" alt="Logo" class="footer-logo">
+            <p><b>Torremolinos Gestión Vacacional</b></p>
+            <p>C. Campillos, 10, 29620 Torremolinos, Málaga</p>
+            <p>WhatsApp: <b>+34 603 658 260</b> | <a href="https://www.gestion-apartamentos-turisticos-torremolinos.com/" target="_blank">www.gestion-apartamentos-turisticos-torremolinos.com</a></p>
+            <div style="margin-top: 30px; border-top: 1px solid #333; padding-top: 30px;">
+                &copy; 2026 Torremolinos Gestión Vacacional. Expertos en normativa y gestión de viviendas con fines turísticos.
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/34603658260" class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 32 32" style="width:35px; height:35px; fill:white;"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.48 2.031 7.786l-2.031 7.214 7.391-1.938c2.207 1.234 4.755 1.938 7.409 1.938 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.454 0-4.735-0.655-6.703-1.795l-0.48-0.276-4.417 1.156 1.177-4.183-0.302-0.48c-1.248-1.983-1.974-4.324-1.974-6.83 0-7.12 5.792-12.912 12.912-12.912s12.912 5.792 12.912 12.912-5.792 12.912-12.912 12.912zM21.786 19.103c-0.318-0.159-1.88-0.927-2.172-1.033s-0.504-0.159-0.717 0.159c-0.212 0.318-0.822 1.033-1.007 1.246s-0.371 0.239-0.689 0.080c-0.318-0.159-1.341-0.495-2.556-1.579-0.945-0.843-1.583-1.884-1.769-2.202s-0.021-0.491 0.138-0.649c0.143-0.142 0.318-0.371 0.477-0.557s0.212-0.318 0.318-0.531c0.106-0.212 0.053-0.398-0.026-0.557s-0.717-1.726-0.981-2.364c-0.258-0.62-0.519-0.536-0.717-0.546s-0.424-0.011-0.637-0.011c-0.212 0-0.557 0.080-0.848 0.398s-1.114 1.087-1.114 2.651c0 1.564 1.14 3.076 1.299 3.289s2.246 3.429 5.44 4.807c0.76 0.328 1.352 0.524 1.815 0.672 0.763 0.243 1.458 0.209 2.008 0.127 0.613-0.091 1.88-0.769 2.145-1.511s0.265-1.379 0.186-1.511c-0.079-0.132-0.292-0.212-0.61-0.371z"></path></svg>
+    </a>
+
+</body>
+</html>
