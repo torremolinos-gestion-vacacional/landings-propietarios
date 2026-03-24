@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpieza y Entrega de Llaves en Torremolinos | Gestión Profesional 24/7</title>
+    <meta name="description" content="¿Cansado de limpiar y esperar huéspedes? Servicio profesional de limpieza, lavandería y check-in en Torremolinos. Todo incluido en nuestra gestión del 15%.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-teal: #57B8B8;
+            --accent-coral: #F27A5D;
+            --dark: #1A1A1A;
+            --light-bg: #F4F8F8;
+            --white: #ffffff;
+        }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--white);
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header { padding: 12px 0; background: var(--white); border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo-container { display: flex; align-items: center; gap: 15px; text-decoration: none; }
+        .logo-img { height: 60px; width: auto; }
+        .logo-text { font-weight: 800; font-size: 0.9rem; color: var(--primary-teal); line-height: 1.2; text-transform: uppercase; }
+        
+        .nav-actions { display: flex; align-items: center; gap: 20px; }
+        .main-link { color: var(--dark); text-decoration: none; font-weight: 600; font-size: 0.9rem; border-bottom: 2px solid var(--accent-coral); }
+        .btn-wa-header { background: #25D366; color: white; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; }
+
+        /* Hero logistics */
+        .hero-logistics { padding: 90px 0; background: linear-gradient(135deg, #e0f2f2 0%, #ffffff 100%); text-align: center; }
+        .hero-logistics h1 { font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 25px; color: var(--dark); }
+        .hero-logistics h1 span { color: var(--accent-coral); }
+        .hero-logistics p { font-size: 1.4rem; margin-bottom: 35px; color: #4A5568; max-width: 850px; margin-inline: auto; }
+
+        /* The Chaos Section */
+        .chaos { padding: 80px 0; background: var(--white); }
+        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 50px; font-weight: 800; }
+        .chaos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .chaos-card { padding: 40px; border-radius: 20px; background: var(--light-bg); border-left: 6px solid var(--accent-coral); }
+        .chaos-card h3 { margin-bottom: 15px; font-size: 1.4rem; color: var(--dark); }
+        
+        /* The 15% Freedom */
+        .freedom { padding: 80px 0; background: var(--dark); color: white; text-align: center; }
+        .freedom h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .big-number { font-size: 6rem; font-weight: 800; color: var(--primary-teal); line-height: 1; margin: 20px 0; }
+        .freedom p { font-size: 1.2rem; max-width: 750px; margin: 0 auto 30px; opacity: 0.9; }
+
+        /* Logistics Detail */
+        .details { padding: 80px 0; }
+        .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .detail-text h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--primary-teal); }
+        .detail-text ul { list-style: none; }
+        .detail-text li { margin-bottom: 15px; padding-left: 30px; position: relative; font-weight: 600; }
+        .detail-text li::before { content: '✔'; position: absolute; left: 0; color: var(--accent-coral); font-weight: 800; }
+
+        /* Final CTA */
+        .cta-logistics { padding: 100px 0; text-align: center; background: var(--primary-teal); color: white; }
+        .btn-large { background: var(--accent-coral); color: white; padding: 22px 50px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.5rem; display: inline-block; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .btn-large:hover { transform: scale(1.05); background: #e06a4d; }
+
+        /* Footer */
+        footer { padding: 60px 0; background: #111; color: #a0aec0; text-align: center; font-size: 0.9rem; }
+        footer a { color: var(--primary-teal); text-decoration: none; font-weight: 700; }
+        footer b { color: white; }
+        .footer-logo { height: 75px; margin-bottom: 20px; }
+
+        /* Floating WhatsApp */
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; transition: 0.3s; }
+
+        @media (max-width: 768px) {
+            .hero-logistics h1 { font-size: 2.2rem; }
+            .detail-grid { grid-template-columns: 1fr; }
+            .logo-text { display: none; }
+            .nav-actions { gap: 10px; }
+            .big-number { font-size: 4.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav">
+            <a href="https://www.gestion-apartamentos-turisticos-torremolinos.com/" class="logo-container">
+                <img src="https://www.gestion-apartamentos-turisticos-torremolinos.com/wp-content/uploads/go-x/u/2c92d1c9-99dd-475f-9dec-624ddd50bc0d/image-240x240.png" alt="Torremolinos Gestión Vacacional" class="logo-img">
+                <span class="logo-text">Torremolinos<br>Gestión Vacacional</span>
+            </a>
+            <div class="nav-actions">
+                <a href="https://www.gestion-apartamentos-turisticos-torremolinos.com/" class="main-link">Web Principal</a>
+                <a href="https://wa.me/34603658260" target="_blank" class="btn-wa-header">WhatsApp</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-logistics">
+        <div class="container">
+            <h1>Deja de ser el "limpiador" de tu propio apartamento... <span>y empieza a ser el dueño</span></h1>
+            <p>Lavar sábanas, esperar a huéspedes que se retrasan y correr a limpiar un domingo... Esa no es la vida que querías cuando compraste tu inversión en Torremolinos.</p>
+            <a href="https://wa.me/34603658260" target="_blank" class="btn-large">Quiero olvidarme de la logística</a>
+        </div>
+    </section>
+
+    <section class="chaos">
+        <div class="container">
+            <h2 class="section-title">La logística mata tu rentabilidad (y tu salud)</h2>
+            <div class="chaos-grid">
+                <div class="chaos-card">
+                    <h3>La limpiadora que no llega</h3>
+                    <p>Tienes una entrada a las 15:00 y tu personal de limpieza te falla. El estrés es insoportable y el huésped te pondrá 1 estrella. <b>Nosotros tenemos equipo propio garantizado.</b></p>
+                </div>
+                <div class="chaos-card">
+                    <h3>Check-ins a las 2 AM</h3>
+                    <p>Huéspedes con vuelos retrasados que te obligan a estar despierto o desplazarte de madrugada. <b>Gestionamos la entrega de llaves 24/7 de forma profesional.</b></p>
+                </div>
+                <div class="chaos-card">
+                    <h3>Lavandería interminable</h3>
+                    <p>Lavar, secar y planchar sábanas para cada reserva consume tu tiempo libre. <b>Usamos lavandería industrial propia para un acabado de hotel 5 estrellas.</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="freedom">
+        <div class="container">
+            <h2>Gestión Logística Integral por solo el</h2>
+            <div class="big-number">15%</div>
+            <p>Incluye limpieza profesional, lavandería industrial, check-in 24/7 y asistencia al huésped. No es un gasto, es la inversión que te devuelve tu tiempo.</p>
+            <p><b>Sin contratos de permanencia.</b> Si no te gusta cómo dejamos tu casa, eres libre de irte.</p>
+        </div>
+    </section>
+
+    <section class="details">
+        <div class="container">
+            <div class="detail-grid">
+                <div class="detail-text">
+                    <h3>Limpieza y entrega de llaves nivel "Superhost"</h3>
+                    <ul>
+                        <li>Limpieza profunda tras cada salida con protocolos COVID-free.</li>
+                        <li>Gestión de lavandería: Sábanas y toallas siempre blancas y perfectas.</li>
+                        <li>Check-in presencial o mediante cerraduras inteligentes.</li>
+                        <li>Reposición de amenities (jabón, papel, kit de bienvenida).</li>
+                        <li>Reporte fotográfico tras cada limpieza para tu tranquilidad.</li>
+                    </ul>
+                </div>
+                <div class="detail-img">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Limpieza profesional" style="width:100%; border-radius:20px; box-shadow:0 15px 30px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-logistics">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 25px;">Recupera tus domingos hoy mismo</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 40px; opacity: 0.9;">Tu única tarea debería ser ver cómo crecen tus ingresos. Del resto nos encargamos nosotros.</p>
+            <a href="https://wa.me/34603658260" target="_blank" class="btn-large">Solicitar presupuesto de gestión</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <img src="https://www.gestion-apartamentos-turisticos-torremolinos.com/wp-content/uploads/go-x/u/2c92d1c9-99dd-475f-9dec-624ddd50bc0d/image-240x240.png" alt="Logo" class="footer-logo">
+            <p><b>Torremolinos Gestión Vacacional</b></p>
+            <p>C. Campillos, 10, 29620 Torremolinos, Málaga</p>
+            <p>WhatsApp: <b>+34 603 658 260</b> | <a href="https://www.gestion-apartamentos-turisticos-torremolinos.com/" target="_blank">www.gestion-apartamentos-turisticos-torremolinos.com</a></p>
+            <div style="margin-top: 30px; border-top: 1px solid #333; padding-top: 30px;">
+                &copy; 2026 Torremolinos Gestión Vacacional. Expertos en Logística Inmobiliaria Turística.
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/34603658260" class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 32 32" style="width:35px; height:35px; fill:white;"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.48 2.031 7.786l-2.031 7.214 7.391-1.938c2.207 1.234 4.755 1.938 7.409 1.938 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.454 0-4.735-0.655-6.703-1.795l-0.48-0.276-4.417 1.156 1.177-4.183-0.302-0.48c-1.248-1.983-1.974-4.324-1.974-6.83 0-7.12 5.792-12.912 12.912-12.912s12.912 5.792 12.912 12.912-5.792 12.912-12.912 12.912zM21.786 19.103c-0.318-0.159-1.88-0.927-2.172-1.033s-0.504-0.159-0.717 0.159c-0.212 0.318-0.822 1.033-1.007 1.246s-0.371 0.239-0.689 0.080c-0.318-0.159-1.341-0.495-2.556-1.579-0.945-0.843-1.583-1.884-1.769-2.202s-0.021-0.491 0.138-0.649c0.143-0.142 0.318-0.371 0.477-0.557s0.212-0.318 0.318-0.531c0.106-0.212 0.053-0.398-0.026-0.557s-0.717-1.726-0.981-2.364c-0.258-0.62-0.519-0.536-0.717-0.546s-0.424-0.011-0.637-0.011c-0.212 0-0.557 0.080-0.848 0.398s-1.114 1.087-1.114 2.651c0 1.564 1.14 3.076 1.299 3.289s2.246 3.429 5.44 4.807c0.76 0.328 1.352 0.524 1.815 0.672 0.763 0.243 1.458 0.209 2.008 0.127 0.613-0.091 1.88-0.769 2.145-1.511s0.265-1.379 0.186-1.511c-0.079-0.132-0.292-0.212-0.61-0.371z"></path></svg>
+    </a>
+
+</body>
+</html>
