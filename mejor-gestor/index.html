@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Mejor Gestor de Apartamentos Vacacionales en Torremolinos | Gestión 15%</title>
+    <meta name="description" content="¿Buscas la máxima rentabilidad? Torremolinos Gestión Vacacional es la empresa líder en la Costa del Sol. Gestión integral 360º con tecnología Icnea.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-teal: #57B8B8;
+            --accent-coral: #F27A5D;
+            --dark: #121212;
+            --light-bg: #F9FCFC;
+            --white: #ffffff;
+        }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--white);
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header { padding: 12px 0; background: var(--white); border-bottom: 1px solid #edf2f7; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo-box { display: flex; align-items: center; gap: 15px; text-decoration: none; }
+        .logo-img { height: 60px; width: auto; }
+        .logo-text { font-weight: 800; font-size: 0.95rem; color: var(--primary-teal); line-height: 1.2; text-transform: uppercase; }
+        
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .main-web { color: var(--dark); text-decoration: none; font-weight: 700; font-size: 0.9rem; border-bottom: 2px solid var(--accent-coral); }
+        .btn-wa-nav { background: #25D366; color: white; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: 0.3s; }
+
+        /* Hero Authority */
+        .hero-best { padding: 100px 0; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1512100356956-c1226c693919?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: white; text-align: center; }
+        .hero-best h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 25px; }
+        .hero-best h1 span { color: var(--accent-coral); }
+        .hero-best p { font-size: 1.4rem; margin-bottom: 35px; max-width: 900px; margin-inline: auto; opacity: 0.9; }
+
+        /* Pillars of Excellence */
+        .pillars { padding: 80px 0; background: var(--white); }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 60px; font-weight: 800; }
+        .pillar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .pillar-item { text-align: center; padding: 30px; border-radius: 20px; background: var(--light-bg); border: 1px solid #eee; }
+        .pillar-item h3 { font-size: 1.6rem; color: var(--primary-teal); margin-bottom: 15px; }
+        .pillar-item b { color: var(--accent-coral); }
+
+        /* Neighborhoods Authority */
+        .neighborhoods { padding: 80px 0; background: var(--dark); color: white; }
+        .n-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; margin-top: 40px; }
+        .n-item { padding: 15px; border: 1px solid rgba(87, 184, 184, 0.3); border-radius: 10px; font-weight: 600; font-size: 1.1rem; }
+
+        /* The 15% Leader */
+        .leader-box { padding: 80px 0; background: var(--white); text-align: center; }
+        .price-hero { font-size: 6rem; font-weight: 800; color: var(--accent-coral); line-height: 1; }
+        .price-label { font-size: 1.5rem; font-weight: 700; color: var(--primary-teal); text-transform: uppercase; margin-bottom: 30px; display: block; }
+
+        /* Case Study / Profit */
+        .profit-table { max-width: 850px; margin: 50px auto; background: white; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid #eee; overflow: hidden; }
+        .row-header { background: #f8f9fa; padding: 20px; font-weight: 800; display: flex; justify-content: space-between; font-size: 1.2rem; }
+        .row-data { padding: 25px; display: flex; justify-content: space-between; border-bottom: 1px solid #f1f1f1; align-items: center; }
+        .label-cell { font-weight: 600; color: #555; }
+        .value-others { color: #aaa; text-decoration: line-through; }
+        .value-us { color: var(--primary-teal); font-weight: 800; font-size: 1.6rem; }
+
+        /* CTA Leader */
+        .cta-leader { padding: 100px 0; text-align: center; background: var(--primary-teal); color: white; }
+        .btn-leader { background: var(--accent-coral); color: white; padding: 22px 60px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 1.6rem; display: inline-block; transition: 0.3s; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .btn-leader:hover { transform: scale(1.05); box-shadow: 0 15px 35px rgba(0,0,0,0.3); }
+
+        /* Footer */
+        footer { padding: 60px 0; background: #111; color: #777; text-align: center; font-size: 0.95rem; }
+        footer b { color: white; }
+        footer a { color: var(--primary-teal); text-decoration: none; }
+
+        /* Floating WA */
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; transition: 0.3s; }
+
+        @media (max-width: 768px) {
+            .hero-best h1 { font-size: 2.3rem; }
+            .price-hero { font-size: 4.5rem; }
+            .row-data { flex-direction: column; text-align: center; gap: 10px; }
+            .logo-text { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav">
+            <a href="https://www.gestion-apartamentos-turisticos-torremolinos.com/" class="logo-box">
+                <img src="https://www.gestion-apartamentos-turisticos-torremolinos.com/wp-content/uploads/go-x/u/2c92d1c9-99dd-475f-9dec-624ddd50bc0d/image-240x240.png" alt="Torremolinos Gestión Vacacional" class="logo-img">
+                <span class="logo-text">Torremolinos<br>Gestión Vacacional</span>
+            </a>
+            <div class="nav-right">
+                <a href="https://www.gestion-apartamentos-turisticos-torremolinos.com/" class="main-web" target="_blank">Página Oficial</a>
+                <a href="https://wa.me/34603658260" target="_blank" class="btn-wa-nav">WhatsApp Directo</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-best">
+        <div class="container">
+            <h1>No busques al gestor más "barato". <span>Busca al mejor de Torremolinos.</span></h1>
+            <p>En el mercado vacacional, lo barato sale caro. La diferencia entre una gestión mediocre y nuestra estrategia líder son más de 1.500€ de beneficio extra al mes.</p>
+            <a href="https://wa.me/34603658260" target="_blank" class="btn-leader">Auditoría de ingresos GRATIS</a>
+        </div>
+    </section>
+
+    <section class="pillars">
+        <div class="container">
+            <h2 class="section-title">¿Por qué somos la opción #1 para propietarios exigentes?</h2>
+            <div class="pillar-grid">
+                <div class="pillar-item">
+                    <h3>Tecnología Icnea</h3>
+                    <p>No usamos "instinto". Usamos software avanzado para cambiar tus precios <b>hora tras hora</b> según la demanda real de Torremolinos.</p>
+                </div>
+                <div class="pillar-item">
+                    <h3>Logística Impecable</h3>
+                    <p>Equipo propio de limpieza y lavandería. Garantizamos que tu apartamento esté siempre <b>perfecto para un 10/10 en reseñas.</b></p>
+                </div>
+                <div class="pillar-item">
+                    <h3>Seguridad Legal</h3>
+                    <p>Asesoría gratuita en Licencias Turísticas y cumplimiento estricto del registro de viajeros (Policía/Hospedajes).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="neighborhoods">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 20px;">Expertos locales en cada rincón de Torremolinos</h2>
+            <p style="text-align: center; opacity: 0.8; font-size: 1.2rem;">Conocemos el mercado real porque estamos presentes en:</p>
+            <div class="n-grid">
+                <div class="n-item">La Carihuela</div>
+                <div class="n-item">El Bajondillo</div>
+                <div class="n-item">Playamar</div>
+                <div class="n-item">Montemar</div>
+                <div class="n-item">El Calvario</div>
+                <div class="n-item">Centro</div>
+                <div class="n-item">El Pinillo</div>
+                <div class="n-item">Los Álamos</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="leader-box">
+        <div class="container">
+            <span class="price-label">Excelencia en Gestión Integral</span>
+            <div class="price-hero">15%</div>
+            <p style="max-width: 750px; margin: 0 auto; font-size: 1.3rem; color: #555;">La mejor gestión de la Costa del Sol no tiene por qué ser la más cara. Cobramos por resultados. <b>Sin permanencia.</b></p>
+            
+            <div class="profit-table">
+                <div class="row-header">
+                    <span>Comparativa Mensual Media</span>
+                    <span>Resultados</span>
+                </div>
+                <div class="row-data">
+                    <span class="label-cell">Ingreso Neto (Propietario vs Nosotros)</span>
+                    <span class="value-others">1.050€</span>
+                    <span class="value-us">2.480€</span>
+                </div>
+                <div class="row-data">
+                    <span class="label-cell">Ocupación Anual</span>
+                    <span class="value-others">48%</span>
+                    <span class="value-us">92%</span>
+                </div>
+                <div class="row-data" style="border: none;">
+                    <span class="label-cell">Tu Tiempo de Gestión</span>
+                    <span class="value-others">30h/mes</span>
+                    <span class="value-us" style="color: var(--accent-coral);">0h/mes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-leader">
+        <div class="container">
+            <h2 style="font-size: 2.8rem; margin-bottom: 25px;">No te conformes con menos</h2>
+            <p style="font-size: 1.4rem; margin-bottom: 40px; opacity: 0.9;">Tu propiedad en Torremolinos es un activo de alto valor. Ponlo en las mejores manos.</p>
+            <a href="https://wa.me/34603658260" target="_blank" class="btn-leader">Quiero que gestionéis mi propiedad</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <img src="https://www.gestion-apartamentos-turisticos-torremolinos.com/wp-content/uploads/go-x/u/2c92d1c9-99dd-475f-9dec-624ddd50bc0d/image-240x240.png" alt="Logo" class="footer-logo" style="height: 80px; margin-bottom: 20px;">
+            <p><b>Torremolinos Gestión Vacacional</b></p>
+            <p>C. Campillos, 10, 29620 Torremolinos, Málaga</p>
+            <p>Email: <a href="mailto:info@gestion-apartamentos-turisticos-torremolinos.com">info@gestion-apartamentos-turisticos-torremolinos.com</a></p>
+            <p style="margin-top: 20px;">Web Principal: <a href="https://www.gestion-apartamentos-turisticos-torremolinos.com/" target="_blank">www.gestion-apartamentos-turisticos-torremolinos.com</a></p>
+            <div style="margin-top: 30px; border-top: 1px solid #333; padding-top: 30px;">
+                &copy; 2026 Torremolinos Gestión Vacacional. Los expertos Nº1 en la Costa del Sol.
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/34603658260" class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 32 32" style="width:35px; height:35px; fill:white;"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.48 2.031 7.786l-2.031 7.214 7.391-1.938c2.207 1.234 4.755 1.938 7.409 1.938 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.454 0-4.735-0.655-6.703-1.795l-0.48-0.276-4.417 1.156 1.177-4.183-0.302-0.48c-1.248-1.983-1.974-4.324-1.974-6.83 0-7.12 5.792-12.912 12.912-12.912s12.912 5.792 12.912 12.912-5.792 12.912-12.912 12.912zM21.786 19.103c-0.318-0.159-1.88-0.927-2.172-1.033s-0.504-0.159-0.717 0.159c-0.212 0.318-0.822 1.033-1.007 1.246s-0.371 0.239-0.689 0.080c-0.318-0.159-1.341-0.495-2.556-1.579-0.945-0.843-1.583-1.884-1.769-2.202s-0.021-0.491 0.138-0.649c0.143-0.142 0.318-0.371 0.477-0.557s0.212-0.318 0.318-0.531c0.106-0.212 0.053-0.398-0.026-0.557s-0.717-1.726-0.981-2.364c-0.258-0.62-0.519-0.536-0.717-0.546s-0.424-0.011-0.637-0.011c-0.212 0-0.557 0.080-0.848 0.398s-1.114 1.087-1.114 2.651c0 1.564 1.14 3.076 1.299 3.289s2.246 3.429 5.44 4.807c0.76 0.328 1.352 0.524 1.815 0.672 0.763 0.243 1.458 0.209 2.008 0.127 0.613-0.091 1.88-0.769 2.145-1.511s0.265-1.379 0.186-1.511c-0.079-0.132-0.292-0.212-0.61-0.371z"></path></svg>
+    </a>
+
+</body>
+</html>
